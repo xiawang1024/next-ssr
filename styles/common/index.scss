@@ -1,0 +1,18 @@
+@charset "UTF-8";
+@import 'reset.scss';
+@import 'mixin.scss';
+/*
+* 手机端适配
+* 特别注意html body标签需要添加自定义属性 data-content-max
+*/
+html {
+  @include root-font-size();
+}
+
+/*
+这里可以初始化一些全局的样式
+*/
+
+body {
+  font-size: 24px;
+}

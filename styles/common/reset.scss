@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+/* 去除iPhone中默认的input样式 */
+input[type='submit'],
+input[type='reset'],
+input[type='button'],
+input:focus,
+button:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+input {
+  -webkit-appearance: none;
+  resize: none;
+  border-radius: 0;
+}
