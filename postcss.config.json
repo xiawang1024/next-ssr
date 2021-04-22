@@ -12,6 +12,17 @@
             "custom-properties": false
           }
         }
+      ],
+      [
+        "postcss-pxtorem",
+        {
+          "rootValue":75,
+          "propList":["*"],
+          "selectorBlackList" :["html"],
+          "minPixelValue" :1.5,
+          "mediaQuery":false,
+          "exclude":"common"
+        }
       ]
     ]
   }

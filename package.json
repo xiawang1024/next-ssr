@@ -15,7 +15,10 @@
     "normalize.css":"^8.0.1"
   },
   "devDependencies": {
-    "sass":"^1.32.11"
+    "sass":"^1.32.11",
+    "postcss-flexbugs-fixes":"^5.0.2",
+    "postcss-preset-env":"^6.7.0",
+    "postcss-pxtorem":"^6.0.0"
   },
   "browserslist":[
     "> 1%",
