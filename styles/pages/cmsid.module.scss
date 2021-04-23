@@ -1,0 +1,15 @@
+.article {
+  width: 100%;
+  box-sizing: border-box;
+  .title {
+    font-size: 32px;
+  }
+  .body {
+    width: 100%;
+    line-height: 1.75;
+    font-size: 28px;
+    img {
+      max-width: 100%;
+    }
+  }
+}
