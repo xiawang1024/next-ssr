@@ -3,5 +3,9 @@
     "source.fixAll": true
   },
   "eslint.format.enable": true,
-  "eslint.run": "onSave"
+  "eslint.run": "onSave",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
