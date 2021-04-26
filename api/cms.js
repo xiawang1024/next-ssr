@@ -8,11 +8,11 @@ const request = axios.create({
 export const getArticles = ({ channelCode, page = 1, limit = 100 }) =>
   request({
     method: 'get',
-    url: `/cms/articles?tenantId=henanradio&channelId=${channelCode}&pageNo=${page}&pageSize=${limit}`,
+    url: `/cms/articles?tenantId=DXNews&channelId=${channelCode}&pageNo=${page}&pageSize=${limit}`,
   })
 
 export const getArticle = (articleId) =>
   request({
     method: 'get',
-    url: `/cms/articlewithrelated?articleId=${articleId}&tenantId=henanradio`,
+    url: `/cms/articlewithrelated?articleId=${articleId}&tenantId=DXNews`,
   })

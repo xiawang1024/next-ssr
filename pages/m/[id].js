@@ -1,7 +1,7 @@
-import Link from 'next/link'
 import styles from 'styles/pages/m.module.scss'
 import { useState } from 'react'
 import { getArticles } from 'api/cms.js'
+import ArticleList from 'components/list/index.js'
 
 function NewsList({ list }) {
   const [page, setPage] = useState(2)
@@ -18,16 +18,9 @@ function NewsList({ list }) {
   }
   return (
     <section className={styles.news}>
-      <h2>NewsList page</h2>
+      <h2>DX NEWS LIST</h2>
       <article>
-        {articles &&
-          articles.map((item) => (
-            <h2 className={styles.title} key={item.title}>
-              <Link href={`/cmsid/${encodeURIComponent(item.id)}`}>
-                <a>{item.title}</a>
-              </Link>
-            </h2>
-          ))}
+        <ArticleList articles={articles} />
       </article>
       <footer className={styles.pages}>
         <button onClick={loadData} className={styles.moreBtn}>
@@ -48,13 +41,13 @@ export async function getStaticProps({ params }) {
     props: {
       list: content,
     },
-    revalidate: 10,
+    revalidate: 60,
   }
 }
 
 export async function getStaticPaths() {
   return {
-    paths: [{ params: { id: '1216567500624498688' } }],
+    paths: [{ params: { id: '1202503537666428928' } }],
     fallback: 'blocking',
   }
 }

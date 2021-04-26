@@ -1,0 +1,39 @@
+.listWrap {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
+  .item {
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: flex-start;
+    .imgWrap {
+      flex: 0 0 200px;
+      .img {
+        width: 200px;
+        height: 150px;
+      }
+    }
+    .textWrap {
+      margin-left: 30px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .title {
+        margin: 0;
+        line-height: 1.25;
+        font-size: 32px;
+        color: #333333;
+      }
+      .other {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 26px;
+        color: #666666;
+      }
+    }
+  }
+}
