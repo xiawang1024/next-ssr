@@ -10,4 +10,7 @@ module.exports = {
   generateBuildId: async () => {
     return 'nextssrhntv0' //构建ID
   },
+  experimental: {
+    scrollRestoration: true,
+  },
 }

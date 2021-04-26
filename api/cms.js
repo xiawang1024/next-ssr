@@ -5,7 +5,7 @@ const request = axios.create({
   timeout: 10000,
 })
 
-export const getArticles = ({ channelCode, page = 1, limit = 10 }) =>
+export const getArticles = ({ channelCode, page = 1, limit = 100 }) =>
   request({
     method: 'get',
     url: `/cms/articles?tenantId=henanradio&channelId=${channelCode}&pageNo=${page}&pageSize=${limit}`,
