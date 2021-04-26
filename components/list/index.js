@@ -22,7 +22,9 @@ function ArticleList({ articles }) {
             <Link href={`/cmsid/${encodeURIComponent(item.id)}`}>
               <a className={styles.item}>
                 <div className={styles.imgWrap}>
-                  <img className={styles.img} src={filterCover(item).url} />
+                  {filterCover(item)?.url && (
+                    <img className={styles.img} src={filterCover(item).url} />
+                  )}
                 </div>
                 <div className={styles.textWrap}>
                   <h3 className={styles.title}>{item.title}</h3>
