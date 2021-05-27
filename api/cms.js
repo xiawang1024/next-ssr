@@ -6,9 +6,6 @@ const request = axios.create({
 })
 
 export const getArticles = ({ channelCode, page = 1, limit = 20 }) => {
-  console.log(
-    `/cms/articles?tenantId=DXNews&channelId=${channelCode}&pageNo=${page}&pageSize=${limit}`
-  )
   return request({
     method: 'get',
     url: `/cms/articles?tenantId=DXNews&channelId=${channelCode}&pageNo=${page}&pageSize=${limit}`,
