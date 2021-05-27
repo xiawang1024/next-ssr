@@ -38,7 +38,7 @@ function NewsList({ list }) {
   const isRefreshing = isValidating && data && data.length === size
 
   useEffect(() => {
-    if (isVisible && !isRefreshing) {
+    if (isVisible && !isRefreshing && !isReachingEnd) {
       setSize(size + 1)
     }
   }, [isVisible, isRefreshing])
