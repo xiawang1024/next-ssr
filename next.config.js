@@ -13,4 +13,17 @@ module.exports = {
   experimental: {
     scrollRestoration: true,
   },
+
+  async rewrites() {
+    return [
+      {
+        source: '/articles/:id',
+        destination: '/m/:id',
+      },
+      {
+        source: '/article/:id',
+        destination: '/cmsid/:id',
+      },
+    ]
+  },
 }
