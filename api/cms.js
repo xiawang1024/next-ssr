@@ -1,19 +1,16 @@
 import axios from 'axios'
 
 const request = axios.create({
-  baseURL: 'https://pubmob.dianzhenkeji.com',
+  baseURL: 'https://pubmod.hntv.tv/mobile',
   timeout: 10000,
 })
-
-export const getArticles = ({ channelCode, page = 1, limit = 20 }) => {
-  return request({
-    method: 'get',
-    url: `/cms/articles?tenantId=DXNews&channelId=${channelCode}&pageNo=${page}&pageSize=${limit}`,
-  })
-}
+//pubmod.hntv.tv/mobile/cms/articlewithrelated?articleId=1398974402900660224
 
 export const getArticle = (articleId) =>
   request({
     method: 'get',
-    url: `/cms/articlewithrelated?articleId=${articleId}&tenantId=DXNews`,
+    url: `/cms/articlewithrelated`,
+    params: {
+      articleId,
+    },
   })

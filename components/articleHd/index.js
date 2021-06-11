@@ -1,4 +1,12 @@
-import styles from 'components/article/article.module.scss'
+/*
+ * @Author: your name
+ * @Date: 2021-06-11 21:29:07
+ * @LastEditTime: 2021-06-11 21:35:45
+ * @LastEditors: Please set LastEditors
+ * @Description: 文稿公共头部
+ * @FilePath: /next-ssr/components/articleHd/index.js
+ */
+import styles from 'components/articleHd/index.module.scss'
 
 function ArticleHd({ article }) {
   return (

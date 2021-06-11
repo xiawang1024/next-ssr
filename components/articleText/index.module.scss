@@ -1,0 +1,13 @@
+.bd {
+  width: 100%;
+  box-sizing: border-box;
+  .text {
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 1.75;
+    font-size: 28px;
+    img {
+      max-width: 100%;
+    }
+  }
+}

@@ -17,15 +17,7 @@ module.exports = {
   async rewrites() {
     return [
       {
-        source: '/articles/:id',
-        destination: '/m/:id',
-      },
-      {
-        source: '/article/:id',
-        destination: '/cmsid/:id',
-      },
-      {
-        source: '/doc/:msgType/:articleId',
+        source: '/news/:articleId',
         destination: '/dxnews/:articleId',
       },
     ]
