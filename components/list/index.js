@@ -22,7 +22,9 @@ function ArticleList({ articles }) {
           <div
             key={item.id}
             className={styles.item}
-            onClick={() => router.push(`/cmsid/${encodeURIComponent(item.id)}`)}
+            onClick={() =>
+              router.push(`/article/${encodeURIComponent(item.id)}`)
+            }
           >
             <div className={styles.imgWrap}>
               {filterCover(item)?.url && (
