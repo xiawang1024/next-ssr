@@ -1,7 +1,7 @@
 /*
  * @Author: xiawang1024
  * @Date: 2021-06-11 16:56:56
- * @LastEditTime: 2021-06-11 21:57:41
+ * @LastEditTime: 2021-06-11 22:44:03
  * @LastEditors: xiawang1024
  * @Description:大象新闻文稿中转
  * @FilePath: /next-ssr/pages/dxnews/[articleId].js
@@ -10,8 +10,11 @@
 import Layout from 'components/layout'
 import { getArticle } from 'api/cms'
 
-import ArticleText from 'components/articleText/index.js'
-import ArticleVideo from 'components/articleVideo/index.js'
+import ArticleText from 'components/articleText'
+import ArticleVideo from 'components/articleVideo'
+import ArticleAudio from 'components/articleAudio'
+import ArticleLive from 'components/articleLive'
+import ArticleTopic from 'components/articleTopic'
 
 /**
  * 大象稿件容器
@@ -43,6 +46,12 @@ function ArticleFilter({ article }) {
       return <ArticleText article={article}></ArticleText>
     case 1:
       return <ArticleVideo article={article}></ArticleVideo>
+    case 2:
+      return <ArticleAudio article={article}></ArticleAudio>
+    case 3:
+      return <ArticleLive article={article}></ArticleLive>
+    case 8:
+      return <ArticleTopic article={article}></ArticleTopic>
     default:
       return 'no articleType'
   }
