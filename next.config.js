@@ -24,6 +24,10 @@ module.exports = {
         source: '/article/:id',
         destination: '/cmsid/:id',
       },
+      {
+        source: '/doc/:msgType/:articleId',
+        destination: '/dxnews/:articleId',
+      },
     ]
   },
 }
